@@ -10,7 +10,8 @@ Summary(pl):	AI::Perceptron - implementacja perceptronu
 Name:		perl-%{pdir}-%{pnam}
 Version:	1.0
 Release:	1
-License:	GPL/Artistic
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	17c4f512664a1981ed8894d85b8eefa4
