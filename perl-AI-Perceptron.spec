@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	AI
-%define	pnam	Perceptron
+%define		pdir	AI
+%define		pnam	Perceptron
 Summary:	AI::Perceptron - an implementation of a Perceptron
 Summary(pl):	AI::Perceptron - implementacja perceptronu
 Name:		perl-AI-Perceptron
@@ -26,7 +26,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 This module is meant to be an introduction to the internal operations
-of Neural Networks.  It lets the user create a single node in a neural
+of Neural Networks. It lets the user create a single node in a neural
 net based on the Perceptron model.
 
 For similar functionality, see Statistics::LTU.
