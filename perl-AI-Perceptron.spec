@@ -32,7 +32,7 @@ Podobn± funkcjonalno¶æ mo¿na znale¼æ w module Statistics::LTU.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-perl Makefile.PL
+%{__perl} Makefile.PL
 %{__make}
 %{!?_without_tests:%{__make} test}
 
