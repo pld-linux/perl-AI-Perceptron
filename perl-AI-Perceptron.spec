@@ -1,17 +1,25 @@
+#
+# Conditional build:
+%bcond_without  tests   # do not perform "make test"
+
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	AI
 %define	pnam	Perceptron
 Summary:	AI::Perceptron - An implementation of a Perceptron
 Summary(pl):	AI::Perceptron - implementacja perceptronu
 Name:		perl-%{pdir}-%{pnam}
-Version:	0.01
-Release:	3
+Version:	1.0
+Release:	1
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	e0be7c652e4b9931b94927fb602a6350
-BuildRequires:	perl-devel >= 5.6
+# Source0-md5:	17c4f512664a1981ed8894d85b8eefa4
+BuildRequires:	perl-devel >= 5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	perl-Module-Build >= 0.20
+%if %{with tests}
+BuildRequires:	perl-accessors
+%endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -33,15 +41,16 @@ Podobn± funkcjonalno¶æ mo¿na znale¼æ w module Statistics::LTU.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL \
-	INSTALLDIRS=vendor
-%{__make}
-%{!?_without_tests:%{__make} test}
+%{__perl} Build.PL \
+	installdirs=vendor \
+	destdir=$RPM_BUILD_ROOT
+./Build
+%{?with_tests:./Build test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+./Build install
 
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 install examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
