@@ -7,7 +7,7 @@
 %define	pnam	Perceptron
 Summary:	AI::Perceptron - an implementation of a Perceptron
 Summary(pl):	AI::Perceptron - implementacja perceptronu
-Name:		perl-%{pdir}-%{pnam}
+Name:		perl-AI-Perceptron
 Version:	1.0
 Release:	1
 # same as perl
