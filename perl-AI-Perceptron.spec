@@ -6,7 +6,7 @@
 %define		pdir	AI
 %define		pnam	Perceptron
 Summary:	AI::Perceptron - an implementation of a Perceptron
-Summary(pl):	AI::Perceptron - implementacja perceptronu
+Summary(pl.UTF-8):   AI::Perceptron - implementacja perceptronu
 Name:		perl-AI-Perceptron
 Version:	1.0
 Release:	1
@@ -31,12 +31,12 @@ net based on the Perceptron model.
 
 For similar functionality, see Statistics::LTU.
 
-%description -l pl
-Ten modu³ ma byæ wprowadzeniem do wewnêtrznych operacji sieci
-neuronowych. Pozwala u¿ytkownikowi stworzyæ pojedynczy wêze³ w sieci
-neuronowej bazuj±cej na modelu perceptronu.
+%description -l pl.UTF-8
+Ten moduÅ‚ ma byÄ‡ wprowadzeniem do wewnÄ™trznych operacji sieci
+neuronowych. Pozwala uÅ¼ytkownikowi stworzyÄ‡ pojedynczy wÄ™zeÅ‚ w sieci
+neuronowej bazujÄ…cej na modelu perceptronu.
 
-Podobn± funkcjonalno¶æ mo¿na znale¼æ w module Statistics::LTU.
+PodobnÄ… funkcjonalnoÅ›Ä‡ moÅ¼na znaleÅºÄ‡ w module Statistics::LTU.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
