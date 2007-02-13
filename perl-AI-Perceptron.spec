@@ -6,7 +6,7 @@
 %define		pdir	AI
 %define		pnam	Perceptron
 Summary:	AI::Perceptron - an implementation of a Perceptron
-Summary(pl.UTF-8):   AI::Perceptron - implementacja perceptronu
+Summary(pl.UTF-8):	AI::Perceptron - implementacja perceptronu
 Name:		perl-AI-Perceptron
 Version:	1.0
 Release:	1
