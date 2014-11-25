@@ -2,9 +2,9 @@
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
 
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	AI
 %define		pnam	Perceptron
+%include	/usr/lib/rpm/macros.perl
 Summary:	AI::Perceptron - an implementation of a Perceptron
 Summary(pl.UTF-8):	AI::Perceptron - implementacja perceptronu
 Name:		perl-AI-Perceptron
@@ -15,9 +15,10 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	17c4f512664a1981ed8894d85b8eefa4
+URL:		http://search.cpan.org/dist/AI-Perceptron/
+BuildRequires:	perl-Module-Build >= 0.20
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-BuildRequires:	perl-Module-Build >= 0.20
 %if %{with tests}
 BuildRequires:	perl-accessors
 %endif
@@ -54,7 +55,7 @@ rm -rf $RPM_BUILD_ROOT
 ./Build install
 
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
-install examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+cp -p examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
