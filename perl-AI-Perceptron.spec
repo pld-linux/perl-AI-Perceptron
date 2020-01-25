@@ -4,7 +4,6 @@
 
 %define		pdir	AI
 %define		pnam	Perceptron
-%include	/usr/lib/rpm/macros.perl
 Summary:	AI::Perceptron - an implementation of a Perceptron
 Summary(pl.UTF-8):	AI::Perceptron - implementacja perceptronu
 Name:		perl-AI-Perceptron
